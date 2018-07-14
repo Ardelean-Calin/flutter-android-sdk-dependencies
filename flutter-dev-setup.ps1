@@ -18,7 +18,6 @@
   Purpose/Change: Initial script development
 #>
 
-Clear-Host
 
 # Gets the installed packages list from sdkmanager
 function get-installed {
