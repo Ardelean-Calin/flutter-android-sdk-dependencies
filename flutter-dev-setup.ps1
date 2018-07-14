@@ -85,11 +85,6 @@ function get-platforms {
     $platforms
 }
 
-if (!$Env:JAVA_HOME) {
-    Write-Host "'JAVA_HOME' not set. Cannot continue. Try setting it or install 'openjdk' from the 'java' bucket. (scoop bucket add java; scoop install openjdk) then rerun the script by running 'flutter-dev-setup.ps1' in a PowerShell Window". -ForegroundColor Red
-    Exit
-}
-
 # Check if sdkmanager exists and in path. Program cannot continue without it
 Get-Command "sdkmanager" -ErrorAction SilentlyContinue -ErrorVariable err | Out-Null
 if ($err.Count -eq $true) {
